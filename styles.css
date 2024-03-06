@@ -1,0 +1,149 @@
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slant-section {
+    background-color: #3498db;
+    padding: 10px 0;
+    color: white;
+    transform: skewY(-6deg);
+    margin-top: -600px;
+    
+  }
+  
+  .slant-section {
+    transform: skewY(-10deg);
+  }
+
+ 
+  .float {
+    transform: skewY(10deg);
+   
+  }
+
+  .float {
+    margin-top: 650px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 2px;
+
+  }
+
+  .about-me {
+    color: black;
+    background-color: white;
+    width: 60%;
+    height: 490px;
+    margin-left: -4px;
+    margin: auto 16px;
+    text-align: center;
+    border-radius: 10px;
+   
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+
+  }
+  .profile-photo {
+    width: 40%;
+    height: 100%;
+  }
+
+  #profile {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+  }
+
+  .inner-kk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  #my-work {
+    margin-top: 200px;
+    margin-left: 140px;
+    margin-right: 140px;
+    text-align: center;
+    font-size: 4.375em;
+  }
+ 
+  .all-divs {
+    border-radius: 10px 10px 0px 0px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+  }
+  .buttom-div {
+    background-color: white;
+    height: 130px;
+    
+  }
+  .middle {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+   
+  }
+
+  .middle-2 {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 40px;
+
+  }
+
+  .top-div {
+    height: 70%;
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+  }
+
+  footer {
+    height: 50vh;
+    background-color: rgb(60, 60, 87);
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contact-me {
+    text-align: center;
+  }
+    .contact-me h1 {
+        color: white;
+    }
+    .contact-me p {
+        color: white;
+    }
+
+    .top-div {
+      display: flex;
+      justify-content: center;
+      
+    }
+    h2 {
+      margin-top: 0px;
+      padding-top: 15px;
+      text-align: center;
+    }
+
+  
