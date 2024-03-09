@@ -134,7 +134,7 @@ body {
    transform: scale(1.05);
    transition: 0.5s;
    /* a pale grey color to appear on top*/
-    background-color: #b5d129;
+    background-color: #616357;
     
 
   }
@@ -234,13 +234,19 @@ body {
      font-size: 18px;
     }
     #type-effect {
-      font-size: 35px;
+      font-size: 30px;
       padding-inline: 10px;
-      font-family: poppins;
+      font-family: "Libre Baskerville", serif;
+      font-weight: 400;
+      font-style: normal;
+      
+     
     }
     .profile {
-      font-size: 35px;
-      font-family: poppins;
+      font-size: 30px;
+      font-family: "Libre Baskerville", serif;
+      font-weight: 400;
+      font-style: normal;
     }
     .profile {
       opacity: 0;
