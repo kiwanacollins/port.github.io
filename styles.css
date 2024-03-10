@@ -86,7 +86,7 @@ body {
     margin-left: 140px;
     margin-right: 140px;
     text-align: center;
-    font-size: 4.375em;
+    font-size: 5.375em;
     opacity: 0;
     animation: work 2s forwards;
     animation-delay: 2s;
@@ -134,7 +134,7 @@ body {
    transform: scale(1.05);
    transition: 0.5s;
    /* a pale grey color to appear on top*/
-    background-color: #616357;
+    background-color: #868781;
     
 
   }
