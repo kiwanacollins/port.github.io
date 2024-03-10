@@ -133,8 +133,8 @@ body {
   .all-divs:hover {
    transform: scale(1.05);
    transition: 0.5s;
-   /* a pale grey color to appear on top*/
     background-color: #868781;
+    cursor: pointer;
     
 
   }
@@ -187,8 +187,10 @@ body {
     background-color: rgb(157, 142, 123);
    height: 250px;
    margin-left: 20px;
-   width: 700px;
+   width: 500px;
    margin-top: 45px;
+   position: relative;
+ 
    
 
   }
@@ -204,7 +206,6 @@ body {
           "EDPT" 100,
           "EHLT" 12;
 
-      /* a shadow at the buttom */
       text-shadow: 2px 2px 5px rgb(0, 0, 0);
 
     }
@@ -274,4 +275,22 @@ body {
 
    .right-footer {
     margin-right: 20px;
+   }
+   .kkk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .down-socials {
+    margin-bottom: 40px;
+    border-radius: 50%;
+   }
+   .down-socials:hover {
+      scale: 1.1;
+      rotate: -10deg;
+      transition: 1s;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      border-radius: 50%;
+       cursor: pointer;
    }
