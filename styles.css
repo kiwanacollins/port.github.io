@@ -141,6 +141,9 @@ body {
   .buttom-div {
     background-color: white;
     height: 130px;
+      text-align: center;
+         font-family: 'Open Sans', sans-serif;
+         font-size: 18px;
     
   }
   .middle {
@@ -229,11 +232,7 @@ body {
       text-align: center;
     }
 
-    .buttom-div {
-     text-align: center;
-     font-family: 'Open Sans', sans-serif;
-     font-size: 18px;
-    }
+   
     #type-effect {
       font-size: 30px;
       padding-inline: 10px;
@@ -270,7 +269,9 @@ body {
    .buttom-div > h2 {
       font-size: 35px;
       font-family: poppins;
-    opacity: 0.85;
+      opacity: 0.9;
+      text-align: center;
+      padding-left: 10px;
    }
 
    .right-footer {
@@ -293,4 +294,9 @@ body {
       box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
       border-radius: 50%;
        cursor: pointer;
+   }
+   a {
+    text-decoration: none;
+    /* remove all default color for anchor tags */
+    color: inherit;
    }
