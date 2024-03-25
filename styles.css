@@ -15,11 +15,12 @@ body {
 
 .slant-section {
   transform: skewY(-10deg);
-    background-color: #3498db;
+    background-color: #3fce3a;
     padding: 10px 0;
     color: rgb(179, 171, 171);
     transform: skewY(-6deg);
     margin-top: -600px;
+    
     
   }
 
