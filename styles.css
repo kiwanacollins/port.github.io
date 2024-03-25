@@ -6,11 +6,15 @@
 html {
   scroll-behavior: smooth;
 }
+
+
 body {
   font-family: poppins;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .slant-section {
@@ -46,7 +50,7 @@ body {
   .about-me {
     color: black;
     background-color: white;
-    width: 60%;
+    width: 100%;
     min-height: 490px;
     margin-left: -4px;
     margin: auto 16px;
@@ -63,18 +67,24 @@ body {
   @media (max-width: 1200px) {
     .about-me {
       width: 80%;
+      font-size: 20px;
+ 
     }
   }
   
   @media (max-width: 900px) {
     .about-me {
       width: 90%;
+      font-size: 20px;
     }
   }
   
   @media (max-width: 600px) {
     .about-me {
       width: 100%;
+      font-size: 15px;
+      
+
     }
   }
   .profile-photo {
@@ -118,15 +128,7 @@ body {
   
 
   }
-  h1#my-work::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background: linear-gradient(to right, red, blue);
-  }
+
 
   
   @keyframes work {
@@ -167,25 +169,23 @@ body {
     
   }
   .middle {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 35px;
-    width: 100vw;
+    width: 80vw;
    
   }
 
   .middle-2 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 35px;
     margin-top: 40px;
-    width: 100vw;
+    width: 80vw;
 
   }
 
