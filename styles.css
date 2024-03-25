@@ -44,11 +44,10 @@ body {
   }
 
   .about-me {
-    
     color: black;
     background-color: white;
     width: 60%;
-    height: 490px;
+    min-height: 490px;
     margin-left: -4px;
     margin: auto 16px;
     text-align: center;
@@ -59,6 +58,24 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+  }
+  
+  @media (max-width: 1200px) {
+    .about-me {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .about-me {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .about-me {
+      width: 100%;
+    }
   }
   .profile-photo {
     width: 40%;
@@ -96,6 +113,8 @@ body {
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    width: 100vw;
+
   
 
   }
@@ -154,6 +173,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 35px;
+    width: 100vw;
    
   }
 
@@ -165,6 +185,7 @@ body {
     align-items: center;
     gap: 35px;
     margin-top: 40px;
+    width: 100vw;
 
   }
 
@@ -172,10 +193,11 @@ body {
     height: 70%;
     border-radius: 10px 10px 0px 0px;
     background-color: white;
+    width: 100%;
   }
 
   footer {
-    height: 50vh;
+    height: 600px;
     background-color: rgb(60, 60, 87);
     margin-top: 60px;
     width: 100%;
@@ -301,3 +323,38 @@ body {
     /* remove all default color for anchor tags */
     color: inherit;
    }
+
+   main-all {
+    width: 100vw;
+
+   }
+   .two-divs{
+    width: 100dvw;
+   }
+   /* CSS for large screens */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* CSS for screens smaller than 1200px */
+@media (max-width: 1200px) {
+  body {
+      font-size: 14px;
+  }
+}
+
+/* CSS for screens smaller than 900px */
+@media (max-width: 900px) {
+  body {
+      font-size: 12px;
+  }
+}
+
+/* CSS for screens smaller than 600px */
+@media (max-width: 600px) {
+  body {
+      font-size: 10px;
+  }
+}
