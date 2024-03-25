@@ -10,7 +10,7 @@ h1#my-work::after {
   content: "";
   position: absolute;
   left: -200px;
-  right: 0;
+  right: -200px;
   bottom: 0;
   height: 3px;
   background: linear-gradient(to right, red, blue);
