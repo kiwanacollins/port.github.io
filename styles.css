@@ -9,11 +9,12 @@ html {
 h1#my-work::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: -200px;
   right: 0;
   bottom: 0;
   height: 3px;
   background: linear-gradient(to right, red, blue);
+  animation: animate 2s linear infinite;
 }
 
 body {
@@ -119,8 +120,7 @@ body {
 
   #my-work {
     margin-top: 200px;
-    margin-left: 140px;
-    margin-right: 140px;
+   margin-inline: auto;
     text-align: center;
     font-size: 5.375em;
     opacity: 0;
