@@ -10,7 +10,7 @@ h1#my-work::after {
   content: "";
   position: absolute;
   left: -200px;
-  right: -200px;
+  right: -700px;
   bottom: 0;
   height: 3px;
   background: linear-gradient(to right, red, blue);
@@ -35,19 +35,9 @@ body {
     width: 100%;
     
   }
-  
-  .slant-section {
-    transform: skewY(-10deg);
-  }
-
- 
-  .float {
-    transform: skewY(10deg);
-   
-  }
 
   .float {
-    margin-top: 650px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     margin-left: 10px;
@@ -73,29 +63,7 @@ body {
     font-style: normal;
   }
   
-  @media (max-width: 1200px) {
-    .about-me {
-      width: 80%;
-      font-size: 20px;
- 
-    }
-  }
-  
-  @media (max-width: 900px) {
-    .about-me {
-      width: 90%;
-      font-size: 20px;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .about-me {
-      width: 100%;
-      font-size: 15px;
-      
 
-    }
-  }
   .profile-photo {
     width: 40%;
     height: 100%;
