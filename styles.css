@@ -6,7 +6,15 @@
 html {
   scroll-behavior: smooth;
 }
-
+h1#my-work::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(to right, red, blue);
+}
 
 body {
   font-family: poppins;
