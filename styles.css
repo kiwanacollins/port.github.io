@@ -150,9 +150,23 @@ body {
     transform: scale(1);
   }
 }
-
-
-
+.about-me-img {
+ width: 80vw;
+ display: flex;
+ gap: 10em;
+ margin: 0 auto;
+ margin-top: 120px;
+ 
+}
+.about-me-img .content {
+  width: 50%;
+  color: #ffffff;
+  font-family: "PT Serif", serif;
+  font-size: 1.4em;
+}
+.about-me-img .my-image {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+}
 
 
 
@@ -163,6 +177,14 @@ body {
   .main {
     width: 100vw;
 
+  }
+  .about-me-img {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-me-img .content {
+    width: 100%;
   }
   .top {
     width: 100vw;
