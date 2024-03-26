@@ -123,11 +123,35 @@ body {
 .img {
   margin-right: 30px;
   margin-left: 30px;
+  animation: heartbeat 2s infinite;
 }
 .img img {
   border-radius: 20px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+
 }
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.02);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.02);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 
 
 
