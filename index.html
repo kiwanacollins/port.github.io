@@ -1,119 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY PORTFOLIO</title>
-      <link rel="icon" href="code_wiz.jpg">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-     
-   
-    <div class="main-all">
+      <link rel="icon" href="collins.jpg">
 
-                <div class="about-me">
-                    <h2>ABOUT ME</h2>
-                    <h1 class="gradient">KIWANA COLLINS</h1>
-                    <div class="inner-kk">
-                    <span id="type-effect"> </span><p class="profile">Am a self-taught developer 
-                        with a background in computer science with a bachelors degree of Information Technology. </p>
-                    </div>
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/uikit.min.js" defer></script>
+    <script src="js/uikit-icons.min.js" defer></script>
+    <script src="script.js" defer></script>
+ 
+</head>
+<body >
+    <div class="main">
+        <div class="top">
+            <div class="left"><h1>KIWANA COLLINS</h1></div>
+            <div class="right">
+              <div><h4>ABOUT</h4></div>
+              <div><h4>EXPERIENCE</h4></div>
+              <div><h4>SKILLS</h4></div>
+              <div><h4>EDUCATION</h4></div>
+              <div><h4>PROJECTS</h4></div>
+            </div>
+        </div>
+        <!-- section containing hello text and first code image -->
+        <div class="mother1">
+            <div class="hello">
+                <p>
+                    Hello, <br> This is <span style="color: #EC4899;">KIWANA COLLINS</span>, I'm a <span style="color: #16F2B3;">Professional Software</span> Developer.
+                </p>
+                <div class="social-media">
+                    <div class=" socials"><img src="github.png" alt="github"></div>
+                    <div class=" socials"><img src="linkedin.png" alt="linkedIn"></div>
+                    <div class=" socials"><img src="whatsapp.png" alt="whatsapp"></div>
+                </div>
+                <div class="last-contact">
+                    
+                    <button class="demo uk-button uk-button-default contact" type="button"onclick="UIkit.notification({message: '  CALL: +256709411366', status:'success', pos: 'bottom-left'})">CONTACT ME</button>
+
+                    <!--  -->
                     
                     
                 </div>
-          
-            
+            </div>
+            <div>
+                <div class="code-container">
+                    <div class="code-header">
+                       
+                    <pre><code>
+                        <div class="top-3-dots">
+                            <div class="pink all-3"></div>
+                            <div class=" all-3" id="orange"></div>
+                            <div class="white all-3" id="green"></div>
+                        </div>
+                      const coder = {
+                        name: 'Kiwana Collins',
+                        skills: ['HTML', 'CSS', 'JS', 'Git', 'GitHub'],
+                        isHireable: function() {
+                          return(
+                            this.hardWorker &&
+                            this.problemSolver
+                          )
+                        }
+                      };
+                    </code></pre>
+                  </div>
+                </div>
+            </div>
+        </div>
     
        
-    
     </div>
-
-    <h1 id="my-work">My Work</h1> 
-    <div class="two-divs">
-        <div class="middle">
-           <a href="https://kiwanacollins.github.io/Calculator/" target="_blank">  <div class="all-divs">
-                <div class="top-div">
-                    <img src="calc.png" alt="" style=" max-width: 100%; height: auto; border-radius: 10px 10px 0px 0px;">
-                </div>
-                <div class="buttom-div"><h2>Calculator</h2> <p>This is a functional calculator with a great UI. <br>I build it with vanilla HTML, CSS and JS.</p></div>
-            </div>
-            </a>
-           <a href="https://kiwanacollins.github.io/TIC-TAC-TOE-Game/" target="_blank"> <div class="all-divs">
-                <div class="top-div">
-                    <img src="tictac.png" alt="" style=" max-width: 100%; height: auto; border-radius: 10px 10px 0px 0px;">
-                </div>
-                <div class="buttom-div"><h2>Tic Tac Toe</h2> <P>A  great game with a beautiful UI<br> Its built with vanilla HTML, CSS and JS.
-                </P></div>
-            </div>
-            </a>
-           <a href="https://kiwanacollins.github.io/ROCK-PAPER-SCISSOR/" target="_blank">  <div class="all-divs">
-                <div class="top-div">
-                    <img src="rps.png" alt="" style=" max-width: 100%; height: auto; border-radius: 10px 10px 0px 0px;">
-                </div>
-                <div class="buttom-div"><h2>Rock Paper Scissors</h2> <p>This game is Human vs Computer!! <br> Built in plain HTML, CSS & JS</p></div>
-            </div>
-        </a>
-        </div>
-        <div class="middle-2">
-          <a href="https://kiwanacollins.github.io/Landing-Page/" target="_blank"> <div class="all-divs">
-                <div class="top-div">
-                    <img src="landing_page.png" alt="" style=" max-width: 100%; height: auto; border-radius: 10px 10px 0px 0px;">
-                </div>
-                <div class="buttom-div"><h2>Landing Page</h2> <p>This is a landing page built in plain HTML and CSS</p></div>
-            </div>
-            </a>
-           <a href="https://kiwanacollins.github.io/SignUp-Form/" target="_blank"> <div class="all-divs">
-                <div class="top-div">
-                    <img src="form.png" alt="" style=" max-width: 100%; height: auto; border-radius: 10px 10px 0px 0px;">
-                </div>
-                <div class="buttom-div"><h2>Sign-Up Form</h2> <p>This is a Sign Up form which can accept User Input</p></div>
-            </div>
-            </a>
-           <a href="" target="_blank"> <div class="all-divs">
-                <div class="top-div">
-                    <img src="google.com.jpg" alt="" style=" max-width: 100%; height: auto; border-radius: 10px 10px 0px 0px;">
-                </div>
-                <div class="buttom-div"><h2>Google</h2> <p>This is a Google home page which can accept User Input</p></div>
-            </div>
-        </a>
-           
+   
     
-        </div>
-    </div>
-
-        <footer>
-            <div class="contact-me">
-                <div class="kkk">
-                    <h1>Contact Me</h1>
-                    <p style="font-size: 30px; margin-top: -30px; color: rgb(222, 229, 176); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);">Feel free to contact me via my socials</p>
-                </div>
-                <div" style="position: absolute; left: 30px;">
-                <div style="display: flex; align-items: center; gap: 10px; margin-top: -20px;">
-                    <img src="call.png" alt="" style="color: white;"> <p style="color: white; font-size: 20px; margin-top: 10px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);">+256(0)709411366</p>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px; margin-top: -17px;">
-                    <img src="gmail.png" alt="" style="width: 30px;">
-                    <p style=" text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);">collinzcalson@gamil.com</p>
-                </div>
-                <div style="display: flex; justify-content: center; gap: 100px;">
-                    <a href="https://wa.me/256709717448" target="_blank"><img src="whatsapp.png" alt="" style="width: 40px; transition: 1s;" class="down-socials"></a>
-            
-                 <a href="https://github.com/kiwanacollins" target="_blank"><img src="github.png" alt="" style="width: 40px; transition: 1s;" class="down-socials"></a>
-
-                </div>
-                   
-                </div>
-                
-               
-            </div>
-            <div class= "right-footer">
-                <img src="collins.jpg" alt="me pic" style="width: 250px; border-radius: 5px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4); margin-top: 50px;">
-            </div>
-        </footer>
-    <script src="script.js"></script>
 </body>
 </html>
+
