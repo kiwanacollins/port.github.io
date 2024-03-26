@@ -1,12 +1,11 @@
-let text = 'Collins is a frontend developer with a passion for creating beautiful and functional user interfaces.';
-let index = 0;
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('heartbeat');
+    } else {
+      entry.target.classList.remove('heartbeat');
+    }
+  });
+});
 
-function typeEffect() {
-  if (index < text.length) {
-    document.getElementById('type-effect').innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, 100); // Adjust the timeout to control the typing speed
-  }
-}
-
-window.onload = typeEffect;
+observer.observe(document.querySelector('.code-container'));

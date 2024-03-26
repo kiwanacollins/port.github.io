@@ -60,7 +60,7 @@ body {
 }
 .hello {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 48px;
   width: 40%;
   font-family: "PT Serif", serif;
@@ -99,13 +99,15 @@ body {
   width: 1em;
 }
 .contact {
-  border-radius: 20px;
+  border-radius: 30px;
   border: none;
   color: white;
   background-color: #16f2b3;
   font-family: "PT Serif", serif;
   font-weight: 800;
+  font-size: 20px;
   font-style: normal;
+ height: 50px;
 
 }
 .contact:hover {
@@ -136,13 +138,13 @@ body {
     transform: scale(1);
   }
   25% {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   50% {
     transform: scale(1);
   }
   75% {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   100% {
     transform: scale(1);
