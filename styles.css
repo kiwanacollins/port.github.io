@@ -19,6 +19,7 @@ body {
 .main {
   width: 90vw;
   margin: auto auto;
+  
 }
 .top {
   width: 90vw;
@@ -102,6 +103,17 @@ body {
  height: 50px;
 
 }
+.h3kk {
+  color: #ffffff;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-block: 4rem;
+} 
 .contact:hover {
   background-color: #ff1f75;
 }
@@ -168,6 +180,26 @@ body {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
 }
 
+.scroll-container {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-top: 30px;
+  width: 90%;                    
+  margin: 0 auto;
+  height: 50vh;
+}
+.scroll-container img {
+  max-width: 100%;
+  margin-inline: 0.4rem;
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+  border-radius: 15px;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
 
 
