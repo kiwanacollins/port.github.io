@@ -310,7 +310,7 @@ body {
  .image-box {
   height: 80%;
   border-bottom: 1px solid black;
-    background-color: #0C0F30;
+  border-radius: 10px;
  
  }
 
