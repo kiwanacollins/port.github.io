@@ -90,6 +90,15 @@ body {
 }
 .socials {
   width: 1.3em;
+  transition: 1s;
+}
+.socials:hover {
+  scale: 1.4;
+  transition: 1s;
+}
+.content p {
+  text-align: justify;
+   text-align-last: center;
 }
 .contact {
   border-radius: 30px;
@@ -268,6 +277,10 @@ body {
   .main {
     width: 100vw;
 
+  }
+  .content p {
+    text-align: center;
+     text-align-last: center;
   }
   .h3kk {
     font-size: 20px;
