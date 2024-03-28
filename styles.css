@@ -269,7 +269,44 @@ body {
   }
 }
 
- 
+ .top-buttom{
+  display: flex;
+  flex-shrink: 1;
+  justify-content: center;
+  gap: 0.3rem;
+ }
+ #top-id {
+  padding-bottom: 0.2rem;
+ }
+ #buttom-id {
+  padding-bottom: 1vw;
+ }
+ .project-section {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 5rem;
+ }
+ .project-section h2 {
+  color: #16f2b3;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 1.5625rem;
+  font-style: normal;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+  width: 45%;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-block: 3rem;
+  text-align: center;
+
+ }
+ .project-children {
+  height: 18.75rem;
+  width: 18.75rem;
+  background-color: rgb(56, 130, 91);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+ }
 
 /* Media Queries */
 
@@ -278,6 +315,14 @@ body {
     width: 100vw;
 
   }
+  #top-id {
+    padding-bottom: 0.6944vw;
+   }
+  .project-children {
+    height: 10.75rem;
+    width: 18.75rem;
+    background-color: red;
+   }
   .content p {
     text-align: center;
      text-align-last: center;
