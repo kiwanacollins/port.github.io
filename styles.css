@@ -9,7 +9,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   /* copilot */
-  background-image: linear-gradient(to bottom right, #000033, #000066);
+  background-image: linear-gradient(to bottom right, #000033, #1e5027);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -182,26 +182,83 @@ body {
 
 .scroll-container {
   display: flex;
+  align-items: center;
   overflow-x: hidden;
   white-space: nowrap;
   margin-top: 30px;
   width: 90%;                    
   margin: 0 auto;
-  height: 50vh;
+  height: 360px;
+  padding-bottom: 40px;
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
-.scroll-container img {
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.skills-box > div:nth-child(2) {
+  width: 6em;
+}
+
+.scroll-container .skills-box {
   max-width: 100%;
   margin-inline: 0.4rem;
   display: inline-block;
-  animation: scroll 10s linear infinite;
-  border-radius: 15px;
+  animation: scroll 580s linear infinite;
+  width: 400px;  /* Adjust this value as needed */
+  height: 400px;  /* Adjust this value as needed */
+ 
+}
+.image-icon {
+  padding-top: 50px;
+}
+.text-skill {
+  color: #ffffff;
+  font-family: "PT Serif", serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+
 }
 @keyframes scroll {
-  0% { transform: translateX(0); }
+  100% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
 
+/* test */
 
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scroll-container:hover .skills-box {
+  animation-play-state: paused;
+}
+
+.skills-box {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
+
+.skills-box:nth-child(odd) {
+  animation-delay: 10s;
+}
+
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+ 
 
 /* Media Queries */
 
@@ -210,6 +267,12 @@ body {
     width: 100vw;
 
   }
+  .scroll-container {
+    height: 20vh;
+    margin-top: 10px;
+  }
+ 
+
   .about-me-img {
     flex-direction: column-reverse;
     align-items: center;

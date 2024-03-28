@@ -1,11 +1,22 @@
-let observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('heartbeat');
-    } else {
-      entry.target.classList.remove('heartbeat');
-    }
-  });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
-observer.observe(document.querySelector('.code-container'));
+// scroll effect
+const container = document.querySelector('.scroll-container');
+let scrollPos = 0;
+
+setInterval(() => {
+  if (scrollPos >= container.scrollWidth - container.clientWidth) {
+    scrollPos = 0;
+  } else {
+    scrollPos += 1;
+  }
+  container.scrollLeft = scrollPos;
+}, 20); // Adjust this value to change the speed of the scroll
