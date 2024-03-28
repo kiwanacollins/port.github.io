@@ -321,7 +321,7 @@ body {
   .project-children {
     height: 9.75rem;
     width: 18.75rem;
-    background-color: red;
+    background-color: rgb(68, 121, 104);
    }
   .content p {
     text-align: center;
