@@ -107,12 +107,13 @@ body {
   color: #ffffff;
   font-family: "PT Serif", serif;
   font-weight: 700;
+  font-size: 40px;
   font-style: normal;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
   border-radius: 5px;
-  margin-block: 4rem;
+  margin-block: 1rem;
 } 
 .contact:hover {
   background-color: #ff1f75;
@@ -168,6 +169,8 @@ body {
  gap: 10em;
  margin: 0 auto;
  margin-top: 120px;
+ margin-bottom: 150px;
+
  
 }
 .about-me-img .content {
@@ -185,7 +188,6 @@ body {
   align-items: center;
   overflow-x: hidden;
   white-space: nowrap;
-  margin-top: 30px;
   width: 90%;                    
   margin: 0 auto;
   height: 360px;
@@ -266,6 +268,9 @@ body {
   .main {
     width: 100vw;
 
+  }
+  .h3kk {
+    font-size: 20px;
   }
   .scroll-container {
     height: 20vh;
