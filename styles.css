@@ -303,7 +303,6 @@ body {
  .project-children {
   height: 18.75rem;
   width: 18.75rem;
-  background-color: rgb(56, 130, 91);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
   border-radius: 10px;
  }
@@ -311,6 +310,7 @@ body {
  .image-box {
   height: 80%;
   border-bottom: 1px solid black;
+    background-color: #0C0F30;
  
  }
 
@@ -320,6 +320,19 @@ body {
   object-fit: cover;
   border-radius: 10px 10px 0px 0px;
 }
+.project-children .content-box {
+ width: 0%;
+  margin-top: -46px;
+  margin-left: 5px;
+ 
+
+}
+.project-children .content-box h2{
+  color: #ff1f75;
+  text-wrap: nowrap;
+
+}
+
 
 /* Media Queries */
 
@@ -328,13 +341,18 @@ body {
     width: 100vw;
 
   }
+  .project-children .content-box h2{
+    font-size: 1em;
+    text-align: start;
+  
+  }
   #top-id {
     padding-bottom: 0.6944vw;
    }
   .project-children {
     height: 9.75rem;
     width: 18.75rem;
-    background-color: rgb(68, 121, 104);
+   
    }
   .content p {
     text-align: center;
