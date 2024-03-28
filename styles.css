@@ -99,6 +99,8 @@ body {
 .content p {
   text-align: justify;
    text-align-last: center;
+   width: 120%;
+   line-height: 40px;
 }
 .contact {
   border-radius: 30px;
@@ -237,8 +239,6 @@ body {
   100% { transform: translateX(-100%); }
 }
 
-/* test */
-
 .scroll-container {
   display: flex;
   overflow-x: auto;
@@ -340,6 +340,11 @@ body {
   .main {
     width: 100vw;
 
+  }
+  .content p {
+    text-align: justify;
+     text-align-last: center;
+     width: 100%;
   }
   .project-children .content-box h2{
     font-size: 1em;
