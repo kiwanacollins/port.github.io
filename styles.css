@@ -308,6 +308,19 @@ body {
   border-radius: 10px;
  }
 
+ .image-box {
+  height: 80%;
+  border-bottom: 1px solid black;
+ 
+ }
+
+ .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
