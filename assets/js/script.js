@@ -140,18 +140,70 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// confetti effect function
+const triggerConfetti = function() {
+  // Create multiple confetti bursts for a better effect
+  const duration = 1000;
+  const animationEnd = Date.now() + duration;
+  const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  const interval = setInterval(function() {
+    const timeLeft = animationEnd - Date.now();
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+
+    const particleCount = 50 * (timeLeft / duration);
+
+    // Fire confetti from the left side
+    confetti(Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+    }));
+
+    // Fire confetti from the right side
+    confetti(Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+    }));
+  }, 250);
+};
+
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    let currentActivePage = null;
+    let newActivePage = null;
+
+    // Find current and new active pages
+    for (let j = 0; j < pages.length; j++) {
+      if (pages[j].classList.contains("active")) {
+        currentActivePage = pages[j].dataset.page;
+      }
+      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+        newActivePage = pages[j].dataset.page;
+      }
+    }
+
+    // Only trigger confetti if switching to a different page
+    if (currentActivePage && newActivePage && currentActivePage !== newActivePage) {
+      triggerConfetti();
+    }
+
+    for (let j = 0; j < pages.length; j++) {
+      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+        pages[j].classList.add("active");
+        navigationLinks[j].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
       }
     }
 
