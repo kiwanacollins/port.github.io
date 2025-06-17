@@ -201,6 +201,11 @@ for (let i = 0; i < navigationLinks.length; i++) {
         pages[j].classList.add("active");
         navigationLinks[j].classList.add("active");
         window.scrollTo(0, 0);
+        
+        // Reset and trigger AOS animations for the new page
+        setTimeout(() => {
+          AOS.refresh();
+        }, 100);
       } else {
         pages[j].classList.remove("active");
         navigationLinks[j].classList.remove("active");
@@ -209,3 +214,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Re-initialize AOS on window resize
+window.addEventListener('resize', () => {
+  AOS.refresh();
+});

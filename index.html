@@ -18,6 +18,11 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!--
+    - AOS (Animate On Scroll) CSS
+  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +38,9 @@
 
   <main>
 
+    <!-- Particles.js Background -->
+    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+
     <!--
       - #SIDEBAR
     -->
@@ -46,9 +54,13 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Kiwana Collins">KIWANA COLLINS</h1>
+          <h1 class="name" title="Kiwana Collins">
+            <span id="typed-name"></span>
+          </h1>
 
-          <p class="title">Web Developer</p>
+          <p class="title">
+            <span id="typed-title"></span>
+          </p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -204,10 +216,10 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title" data-aos="fade-down">About me</h2>
         </header>
 
-        <section class="about-text">
+        <section class="about-text" data-aos="fade-up" data-aos-delay="200">
           <p>
             I'm a passionate Web Developer and third-year Information Technology student at Kampala International University in Uganda.
             I have hands-on experience in Full Stack Web development, primarily with the MERN Stack. I enjoy turning complex problems
@@ -227,11 +239,11 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title" data-aos="fade-right">What i'm doing</h3>
 
           <ul class="service-list">
 
-            <li class="service-item">
+            <li class="service-item" data-aos="zoom-in" data-aos-delay="100">
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-design.svg
@@ -248,7 +260,7 @@
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" data-aos="zoom-in" data-aos-delay="200">
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
@@ -264,7 +276,7 @@
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" data-aos="zoom-in" data-aos-delay="300">
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
@@ -280,7 +292,7 @@
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" data-aos="zoom-in" data-aos-delay="400">
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
@@ -307,11 +319,11 @@
 
         <section class="testimonials">
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+          <h3 class="h3 testimonials-title" data-aos="fade-left">Testimonials</h3>
 
           <ul class="testimonials-list has-scrollbar">
 
-            <li class="testimonials-item">
+            <li class="testimonials-item" data-aos="slide-up" data-aos-delay="100">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
@@ -331,7 +343,7 @@
               </div>
             </li>
 
-            <li class="testimonials-item">
+            <li class="testimonials-item" data-aos="slide-up" data-aos-delay="200">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
@@ -351,7 +363,7 @@
               </div>
             </li>
 
-            <li class="testimonials-item">
+            <li class="testimonials-item" data-aos="slide-up" data-aos-delay="300">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
@@ -371,7 +383,7 @@
               </div>
             </li>
 
-            <li class="testimonials-item">
+            <li class="testimonials-item" data-aos="slide-up" data-aos-delay="400">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
@@ -504,12 +516,12 @@
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" data-aos="fade-down">Resume</h2>
         </header>
 
         <section class="timeline">
 
-          <div class="title-wrapper">
+          <div class="title-wrapper" data-aos="fade-right">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
@@ -519,7 +531,7 @@
 
           <ol class="timeline-list">
 
-            <li class="timeline-item">
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
 
               <h4 class="h4 timeline-item-title">Bachelor of Information Technology</h4>
 
@@ -531,7 +543,7 @@
 
             </li>
 
-            <li class="timeline-item">
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
 
               <h4 class="h4 timeline-item-title">Uganda Advanced Certificate of Education (UACE)</h4>
 
@@ -543,7 +555,7 @@
 
             </li>
 
-            <li class="timeline-item">
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="300">
 
               <h4 class="h4 timeline-item-title">Uganda Certificate of Education (UCE)</h4>
 
@@ -555,7 +567,7 @@
 
             </li>
             
-            <li class="timeline-item">
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="400">
 
               <h4 class="h4 timeline-item-title">Primary Leaving Examination (PLE)</h4>
 
@@ -573,7 +585,7 @@
 
         <section class="timeline">
 
-          <div class="title-wrapper">
+          <div class="title-wrapper" data-aos="fade-left">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
@@ -583,7 +595,7 @@
 
           <ol class="timeline-list">
 
-            <li class="timeline-item">
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="100">
 
               <h4 class="h4 timeline-item-title">Tech Club Leader</h4>
 
@@ -596,7 +608,7 @@
 
             </li>
 
-            <li class="timeline-item">
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
 
               <h4 class="h4 timeline-item-title">Freelance Web Developer</h4>
 
@@ -609,7 +621,7 @@
 
             </li>
 
-            <li class="timeline-item">
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="300">
 
               <h4 class="h4 timeline-item-title">Looking for Internship</h4>
 
@@ -628,11 +640,11 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title" data-aos="zoom-in">My skills</h3>
 
           <ul class="skills-list content-card">
 
-            <li class="skills-item">
+            <li class="skills-item" data-aos="slide-right" data-aos-delay="100">
 
               <div class="title-wrapper">
                 <h5 class="h5">JavaScript</h5>
@@ -645,7 +657,7 @@
 
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-aos="slide-right" data-aos-delay="200">
 
               <div class="title-wrapper">
                 <h5 class="h5">HTML & CSS</h5>
@@ -658,7 +670,7 @@
 
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-aos="slide-right" data-aos-delay="300">
 
               <div class="title-wrapper">
                 <h5 class="h5">React.js</h5>
@@ -671,7 +683,7 @@
 
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-aos="slide-right" data-aos-delay="400">
 
               <div class="title-wrapper">
                 <h5 class="h5">Node.js & Express</h5>
@@ -684,7 +696,7 @@
 
             </li>
             
-            <li class="skills-item">
+            <li class="skills-item" data-aos="slide-right" data-aos-delay="500">
 
               <div class="title-wrapper">
                 <h5 class="h5">Python</h5>
@@ -697,7 +709,7 @@
 
             </li>
             
-            <li class="skills-item">
+            <li class="skills-item" data-aos="slide-right" data-aos-delay="600">
 
               <div class="title-wrapper">
                 <h5 class="h5">MongoDB</h5>
@@ -710,7 +722,7 @@
 
             </li>
 
-            <li class="skills-item">
+            <li class="skills-item" data-aos="slide-right" data-aos-delay="700">
 
               <div class="title-wrapper">
                 <h5 class="h5">WordPress</h5>
@@ -740,12 +752,12 @@
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title" data-aos="fade-down">Portfolio</h2>
         </header>
 
         <section class="projects">
 
-          <ul class="filter-list">
+          <ul class="filter-list" data-aos="fade-up">
 
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
@@ -765,7 +777,7 @@
 
           </ul>
 
-          <div class="filter-select-box">
+          <div class="filter-select-box" data-aos="fade-up" data-aos-delay="100">
 
             <button class="filter-select" data-select>
 
@@ -801,7 +813,7 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web development" data-aos="flip-left" data-aos-delay="100">
               <a href="#">
 
                 <figure class="project-img">
@@ -819,7 +831,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web development" data-aos="flip-left" data-aos-delay="200">
               <a href="#">
 
                 <figure class="project-img">
@@ -837,7 +849,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="web design" data-aos="flip-left" data-aos-delay="300">
               <a href="#">
 
                 <figure class="project-img">
@@ -855,7 +867,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
+            <li class="project-item  active" data-filter-item data-category="applications" data-aos="flip-right" data-aos-delay="100">
               <a href="#">
 
                 <figure class="project-img">
@@ -873,7 +885,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="web design" data-aos="flip-right" data-aos-delay="200">
               <a href="#">
 
                 <figure class="project-img">
@@ -891,7 +903,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="web design" data-aos="flip-right" data-aos-delay="300">
               <a href="#">
 
                 <figure class="project-img">
@@ -909,7 +921,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web development" data-aos="zoom-in-up" data-aos-delay="100">
               <a href="#">
 
                 <figure class="project-img">
@@ -927,7 +939,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
+            <li class="project-item  active" data-filter-item data-category="applications" data-aos="zoom-in-up" data-aos-delay="200">
               <a href="#">
 
                 <figure class="project-img">
@@ -945,7 +957,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web development" data-aos="zoom-in-up" data-aos-delay="300">
               <a href="#">
 
                 <figure class="project-img">
@@ -980,14 +992,14 @@
       <article class="blog" data-page="blog">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title" data-aos="fade-down">Blog</h2>
         </header>
 
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-aos="fade-up" data-aos-delay="100">
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -1015,7 +1027,7 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-aos="fade-up" data-aos-delay="200">
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -1043,7 +1055,7 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-aos="fade-up" data-aos-delay="300">
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -1071,7 +1083,7 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-aos="fade-left" data-aos-delay="100">
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -1099,7 +1111,7 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-aos="fade-left" data-aos-delay="200">
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -1127,7 +1139,7 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-aos="fade-left" data-aos-delay="300">
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -1172,10 +1184,10 @@
       <article class="contact" data-page="contact">
 
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="h2 article-title" data-aos="fade-down">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
+        <section class="mapbox" data-mapbox data-aos="zoom-in">
           <figure>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19060264!2d32.290275!3d0.347596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbd52f78374ab%3A0x9652d689b96b00a4!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
@@ -1183,7 +1195,7 @@
           </figure>
         </section>
 
-        <section class="contact-form">
+        <section class="contact-form" data-aos="fade-up" data-aos-delay="200">
 
           <h3 class="h3 form-title">Contact Form</h3>
 
@@ -1218,9 +1230,9 @@
 
 
   <!--
-    - custom js link
+    - AOS (Animate On Scroll) library (loaded first)
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!--
     - canvas confetti library
@@ -1228,10 +1240,218 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!--
+    - Typed.js library
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!--
+    - Particles.js library
+  -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <!--
+    - custom js link (loaded last)
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Initialize Libraries -->
+  <script>
+    // Initialize AOS
+    // Function to initialize AOS
+    function initAOS() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: false,
+        disable: 'mobile'
+      });
+    }
+    
+    // Initialize on DOM content loaded
+    document.addEventListener('DOMContentLoaded', initAOS);
+    
+    // Also initialize when window is fully loaded (with images, etc.)
+    window.addEventListener('load', function() {
+      // Small delay to ensure everything is rendered
+      setTimeout(function() {
+        AOS.refresh();
+      }, 100);
+    });
+
+    // Initialize Typed.js for name
+    const typedName = new Typed('#typed-name', {
+      strings: ['KIWANA COLLINS', 'FULL STACK DEVELOPER', 'CODE WIZZARD'],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+
+    // Initialize Typed.js for title
+    const typedTitle = new Typed('#typed-title', {
+      strings: ['Web Developer', 'MERN Stack Developer', 'Tech Mentor', 'Problem Solver'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+      showCursor: false,
+      startDelay: 1000
+    });
+
+    // Initialize Particles.js
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: '#64ffda'
+        },
+        shape: {
+          type: 'circle',
+          stroke: {
+            width: 0,
+            color: '#000000'
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#64ffda',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: 'none',
+          random: false,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'repulse'
+          },
+          onclick: {
+            enable: true,
+            mode: 'push'
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+
+    // Function to trigger AOS animations
+    function triggerAOSAnimations() {
+      // First remove animation classes
+      document.querySelectorAll('[data-aos]').forEach(el => {
+        el.classList.remove('aos-animate');
+      });
+      
+      // Force a small reflow
+      void document.documentElement.offsetWidth;
+      
+      // Re-add animation classes after a short delay
+      setTimeout(() => {
+        AOS.refresh();
+        
+        // Add the animation class to visible elements
+        document.querySelectorAll('[data-aos]').forEach(el => {
+          if (isElementInViewport(el)) {
+            el.classList.add('aos-animate');
+          }
+        });
+      }, 200);
+    }
+    
+    // Helper function to check if element is in viewport
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+    
+    // Reset AOS on page navigation
+    const originalNavListener = document.querySelectorAll("[data-nav-link]");
+    originalNavListener.forEach(link => {
+      link.addEventListener('click', () => {
+        // Trigger AOS animations after page transition
+        setTimeout(triggerAOSAnimations, 150);
+      });
+    });
+  </script>
 
 </body>
 
