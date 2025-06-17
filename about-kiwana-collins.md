@@ -9,7 +9,7 @@ GitHub:  github.com/kiwanacollins
 
  Professional Summary
 
-Am a passionate web Developer currently a second-year Information Technology student and tech
+Am a passionate web Developer currently a third-year Information Technology student and tech
 community leader at Kampala International University with hands-on experience in Full Stack Web
 development(MERN Stack mainly) currenty looking for an interniship placement which is going to be for 2
 months from June to July 2025.
