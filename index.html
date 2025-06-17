@@ -1,374 +1,1234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PORTFOLIO.</title>
-      <link rel="icon" href="cartoon.jpg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiwana Collins - Web Developer Portfolio</title>
 
-    <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="styles.css">
-    <script src="js/uikit.min.js" defer></script>
-    <script src="js/uikit-icons.min.js" defer></script>
-    <script src="script.js" defer></script>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
- 
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body >
-    <div class="main">
-        <div class="top">
-            <div class="left"><h3>KIWANA COLLINS</h3></div>
-            <div class="right">
-              <div><h4>ABOUT</h4></div>
-              <div><h4>EXPERIENCE</h4></div>
-              <div><h4>SKILLS</h4></div>
-              <div><h4>EDUCATION</h4></div>
-              <div><h4>PROJECTS</h4></div>
-            </div>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Kiwana Collins" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Kiwana Collins">KIWANA COLLINS</h1>
+
+          <p class="title">Web Developer</p>
         </div>
-        <!-- section containing hello text and first code image -->
-        <div class="mother1">
-         
-            
-            <div class="hello">
-               <div class="hello-text">
-                <p>
-                    Hello, <br> This is <span style="color: #EC4899;">KIWANA COLLINS</span>, I'm a <span style="color: #16F2B3;">Professional Software</span> Developer.
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:kiwanacollinskiwana@gmail.com" class="contact-link">kiwanacollinskiwana@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+256709411366" class="contact-link">+256 709 411 366</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2001-12-07">December 07, 2001</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Kampala, Uganda</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/kiwanacollins" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://wa.me/256709411366" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a passionate Web Developer and second-year Information Technology student at Kampala International University in Uganda.
+            I have hands-on experience in Full Stack Web development, primarily with the MERN Stack. I enjoy turning complex problems
+            into simple, functional, and intuitive solutions.
+          </p>
+
+          <p>
+            My core skills are based on JavaScript and I love to explore new technologies with a self-learning attitude. As a tech
+            community leader at my university, I'm passionate about problem-solving and making web applications more accessible.
+            Currently, I'm looking for an internship placement for 2 months from June to July 2025.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+
+                <p class="service-item-text">
+                  Modern and responsive web applications built with the latest technologies focused on user experience.
                 </p>
-                <hr class="uk-divider-icon">
-                <div class="social-media">
-                    <div class=" socials"><a href="https://github.com/dashboard"><img src="github.png" alt="github"></a></div>
-                    <div class=" socials"><a href="#"><img src="linkedin.png" alt="linkedIn"></a></div>
-                    <div class=" socials"><a href="https://wa.me/256709411366"><img src="whatsapp.png" alt="whatsapp"></a></div>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">MERN Stack Development</h4>
+
+                <p class="service-item-text">
+                  Full-stack JavaScript applications using MongoDB, Express, React, and Node.js.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Technical Mentoring</h4>
+
+                <p class="service-item-text">
+                  Mentoring junior developers and leading university tech community workshops.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI Prompt Engineering</h4>
+
+                <p class="service-item-text">
+                  Creating effective prompts for AI tools to help solve development challenges.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>David Kimuli</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Collins helped develop our company website using React and Node.js. We were impressed with his 
+                    attention to detail and commitment to delivering high-quality work. He's skilled at translating business
+                    requirements into technical solutions and communicated effectively throughout the project.
+                  </p>
                 </div>
-                <div class="last-contact">
-                
-                    <button class="demo uk-button uk-button-default contact" type="button"onclick="UIkit.notification({message: '  CALL: +256709411366', status:'success', pos: 'bottom-left'})">CONTACT ME</button>
-    
-                    <!--  -->
-                    
-                    
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ndagire Bridget</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    As a member of The Code Wizzards Club at KIU, I've experienced Collins' leadership firsthand. He's an excellent
+                    mentor who explains complex programming concepts clearly and patiently. His workshops on web development have
+                    helped many students gain practical skills and confidence in coding.
+                  </p>
                 </div>
-               </div>
-             
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Dr. John Mubiru</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    As a lecturer at Kampala International University, I've observed Collins' exceptional technical skills and 
+                    dedication to learning. He consistently performs well in coursework and has shown great initiative in 
+                    establishing and leading the university's tech community. His passion for technology is inspiring to other students.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Robert Mugisha</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Collins helped me build an e-commerce website for my small business. He was reliable, responsive, and delivered
+                    the project on time. His knowledge of modern web technologies was impressive, and he implemented 
+                    features that have significantly improved my customer experience. I highly recommend his services.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
-            
-                
-            <div class="img">
-                <img src="code-img.png" alt="profile picture">
-            </div>
-               
-           
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2024-06-14">14 June, 2024</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
 
             </div>
-           <hr class="uk-divider-icon">
-        <!-- section containing about me text and image -->
-        <div class="about-me-img">
-            <div class="content">
-                <h2 style="color: #16F2B3; font-size: 1.5em; font-weight: 700; text-align: center;">WHO AM I</h2>
-                <p>
-                    My name is KIWANA COLLINS. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.
-                </p>
-            </div>
-            <div class="my-image">
-                <img src="me.jpg" alt="my picture">
-            </div>
+
+          </section>
+
         </div>
-        <!-- scrolling animation -->
-            <h3 style="text-align: center; color: #16F2B3; font-weight: 700;" class="h3kk">SKILLS</h3>
-        <div class="scroll-container">
-            <!-- Add your div here -->
-          <div class="skills-box">
-            <div class="image-icon"><img src="html.png" alt=""></div>
-            <div class="text-skill">Html</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="css-3.png" alt=""></div>
-            <div class="text-skill">CSS</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="js.png" alt=""></div>
-            <div class="text-skill">JavaScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="physics.png" alt=""></div>
-            <div class="text-skill">React</div>
-          </div>
-        
-          <div class="skills-box">
-            <div class="image-icon"><img src="git.png" alt=""></div>
-            <div class="text-skill">Git</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="github (1).png" alt=""></div>
-            <div class="text-skill">Github</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="bootstrap.png" alt=""></div>
-            <div class="text-skill">Bootstrap</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="java.png" alt=""></div>
-            <div class="text-skill">Java</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="python.png" alt=""></div>
-            <div class="text-skill">Python</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="typescript.png" alt=""></div>
-            <div class="text-skill">TypeScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="linux.png" alt=""></div>
-            <div class="text-skill">Linux</div>
-          </div>
-          <!-- repeat -->
-          <div class="skills-box">
-            <div class="image-icon"><img src="html.png" alt=""></div>
-            <div class="text-skill">Html</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="css-3.png" alt=""></div>
-            <div class="text-skill">CSS</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="js.png" alt=""></div>
-            <div class="text-skill">JavaScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="physics.png" alt=""></div>
-            <div class="text-skill">React</div>
-          </div>
-        
-          <div class="skills-box">
-            <div class="image-icon"><img src="git.png" alt=""></div>
-            <div class="text-skill">Git</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="github (1).png" alt=""></div>
-            <div class="text-skill">Github</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="bootstrap.png" alt=""></div>
-            <div class="text-skill">Bootstrap</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="java.png" alt=""></div>
-            <div class="text-skill">Java</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="python.png" alt=""></div>
-            <div class="text-skill">Python</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="typescript.png" alt=""></div>
-            <div class="text-skill">TypeScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="linux.png" alt=""></div>
-            <div class="text-skill">Linux</div>
-          </div>
-          <!-- repeat -->
-          <div class="skills-box">
-            <div class="image-icon"><img src="html.png" alt=""></div>
-            <div class="text-skill">Html</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="css-3.png" alt=""></div>
-            <div class="text-skill">CSS</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="js.png" alt=""></div>
-            <div class="text-skill">JavaScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="physics.png" alt=""></div>
-            <div class="text-skill">React</div>
-          </div>
-        
-          <div class="skills-box">
-            <div class="image-icon"><img src="git.png" alt=""></div>
-            <div class="text-skill">Git</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="github (1).png" alt=""></div>
-            <div class="text-skill">Github</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="bootstrap.png" alt=""></div>
-            <div class="text-skill">Bootstrap</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="java.png" alt=""></div>
-            <div class="text-skill">Java</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="python.png" alt=""></div>
-            <div class="text-skill">Python</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="typescript.png" alt=""></div>
-            <div class="text-skill">TypeScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="linux.png" alt=""></div>
-            <div class="text-skill">Linux</div>
-          </div>
-          <!-- repeat -->
-          <div class="skills-box">
-            <div class="image-icon"><img src="html.png" alt=""></div>
-            <div class="text-skill">Html</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="css-3.png" alt=""></div>
-            <div class="text-skill">CSS</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="js.png" alt=""></div>
-            <div class="text-skill">JavaScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="physics.png" alt=""></div>
-            <div class="text-skill">React</div>
-          </div>
-        
-          <div class="skills-box">
-            <div class="image-icon"><img src="git.png" alt=""></div>
-            <div class="text-skill">Git</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="github (1).png" alt=""></div>
-            <div class="text-skill">Github</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="bootstrap.png" alt=""></div>
-            <div class="text-skill">Bootstrap</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="java.png" alt=""></div>
-            <div class="text-skill">Java</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="python.png" alt=""></div>
-            <div class="text-skill">Python</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="typescript.png" alt=""></div>
-            <div class="text-skill">TypeScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="linux.png" alt=""></div>
-            <div class="text-skill">Linux</div>
-          </div>
-          <!-- repeat -->
-          <div class="skills-box">
-            <div class="image-icon"><img src="html.png" alt=""></div>
-            <div class="text-skill">Html</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="css-3.png" alt=""></div>
-            <div class="text-skill">CSS</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="js.png" alt=""></div>
-            <div class="text-skill">JavaScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="physics.png" alt=""></div>
-            <div class="text-skill">React</div>
-          </div>
-        
-          <div class="skills-box">
-            <div class="image-icon"><img src="git.png" alt=""></div>
-            <div class="text-skill">Git</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="github (1).png" alt=""></div>
-            <div class="text-skill">Github</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="bootstrap.png" alt=""></div>
-            <div class="text-skill">Bootstrap</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="java.png" alt=""></div>
-            <div class="text-skill">Java</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="python.png" alt=""></div>
-            <div class="text-skill">Python</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="typescript.png" alt=""></div>
-            <div class="text-skill">TypeScript</div>
-          </div>
-          <div class="skills-box">
-            <div class="image-icon"><img src="linux.png" alt=""></div>
-            <div class="text-skill">Linux</div>
-          </div>
-          </div>
-          <!-- Projects Section-->
-          
-         <div class="project-section">
-          <h2>Projects</h2>
-            <div class="top-buttom" id="top-id">
-                <div class="project-children">
-                  <div class="image-box">
-                    <img src="calc.png" alt="">
-                  </div>
-                  <div class="content-box">
-                    <h2>Calculator</h2>
-                  </div>
-                </div>
-                <div class="project-children">
-                  <div class="image-box">
-                    <img src="landing_page.png" alt="">
-                  </div>
-                  <div class="content-box">
-                    <h2>Landing Page</h2>
-                  </div>
-                </div>
-                <div class="project-children">
-                  <div class="image-box">
-                    <img src="tictac.png" alt="">
-                  </div>
-                  <div class="content-box">
-                    <h2>Tic Tac Toe</h2>
-                  </div>
-                </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-            <div class="top-buttom" id="buttom-id">
-                <div class="project-children">
-                  <div class="image-box">
-                    <img src="rps.png" alt="">
-                  </div>
-                  <div class="content-box">
-                    <h2>Rock Paper Scissors</h2>
-                  </div>
-                </div>
-                <div class="project-children">
-                  <div class="image-box">
-                    <img src="form.png" alt="">
-                  </div>
-                  <div class="content-box">
-                    <h2>SignUp Form</h2>
-                  </div>
-                </div>
-                <div class="project-children">
-                  <div class="image-box">
-                    <img src="library.png" alt="">
-                  </div>
-                  <div class="content-box">
-                    <h2>Library App</h2>
-                  </div>
-                </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor of Information Technology</h4>
+
+              <span>2022 — Present</span>
+
+              <p class="timeline-text">
+                Currently in Year 2, Semester 2 at Kampala International University. Active member of the university tech community and Tech Club Leader of The Code Wizzards.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Uganda Advanced Certificate of Education (UACE)</h4>
+
+              <span>2020 — 2022</span>
+
+              <p class="timeline-text">
+                Gombe Secondary School. Studied Chemistry (C), Biology (D), Agriculture Principles & Practices (D), Mathematics (Subsidiary) (5), and General Paper (5). Points: 12
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Uganda Certificate of Education (UCE)</h4>
+
+              <span>2015 — 2019</span>
+
+              <p class="timeline-text">
+                Light College, Katikamu. Achieved a Grade Aggregate of 26 across ten subjects including Mathematics, English, Physics, Chemistry, and Computer Studies.
+              </p>
+
+            </li>
+            
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Primary Leaving Examination (PLE)</h4>
+
+              <span>2008 — 2014</span>
+
+              <p class="timeline-text">
+                Kibiri P/U Primary School. Achieved a Grade Aggregate of 13 with marks in English (2), Mathematics (5), Social Studies (3), and Basic Science & Health Education (3).
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-         </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Tech Club Leader</h4>
+
+              <span>2022 — Present</span>
+
+              <p class="timeline-text">
+                Leading The Code Wizzards Club at Kampala International University. Organizing workshops and training sessions, 
+                facilitating knowledge sharing among students, and mentoring junior developers in web development technologies.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Freelance Web Developer</h4>
+
+              <span>2024 — Present</span>
+
+              <p class="timeline-text">
+                Developing responsive web applications using MERN stack (MongoDB, Express, React, Node.js) for various clients.
+                Creating custom solutions that meet client requirements while following industry best practices.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Looking for Internship</h4>
+
+              <span>June — July 2025</span>
+
+              <p class="timeline-text">
+                Currently seeking a 2-month internship placement to gain professional experience and apply my technical skills
+                in a real-world business environment.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">JavaScript</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">HTML & CSS</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">React.js</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Node.js & Express</h5>
+                <data value="75">75%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+
+            </li>
+            
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="65">65%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+
+            </li>
+            
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">MongoDB</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/code-img.png" alt="MERN Stack Development" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Web Development</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2025-05-15">May 15, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Getting Started with the MERN Stack</h3>
+
+                  <p class="blog-text">
+                    A comprehensive guide to building full-stack applications with MongoDB, Express, React, and Node.js.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/js.png" alt="Modern JavaScript Features" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">JavaScript</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2025-04-20">Apr 20, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Modern JavaScript Features You Should Know</h3>
+
+                  <p class="blog-text">
+                    Exploring ES6+ features that make JavaScript development more efficient and maintainable.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/bootstrap.png" alt="Building Reusable React Components" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">React</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2025-03-18">Mar 18, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Building Reusable React Components</h3>
+
+                  <p class="blog-text">
+                    Best practices for creating modular, maintainable, and reusable components in React applications.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/html.png" alt="RESTful API Design" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Backend</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2025-02-10">Feb 10, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">RESTful API Design Principles</h3>
+
+                  <p class="blog-text">
+                    A guide to designing clean, efficient, and developer-friendly APIs following REST best practices.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/github.png" alt="Deploying MERN Applications" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">DevOps</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2025-01-05">Jan 05, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Deploying MERN Applications to the Cloud</h3>
+
+                  <p class="blog-text">
+                    Step-by-step walkthrough of deploying full-stack JavaScript applications on various cloud platforms.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/python.png" alt="AI Prompt Engineering" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">AI & Web</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2024-12-12">Dec 12, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">AI Prompt Engineering for Web Developers</h3>
+
+                  <p class="blog-text">
+                    How to effectively use AI tools to enhance productivity and solve complex problems in web development.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
-</body>
-</html>
 
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
