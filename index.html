@@ -1271,7 +1271,7 @@
         easing: 'ease-in-out',
         once: false,
         mirror: false,
-        disable: 'mobile'
+        disable: false // Enable on all devices including mobile
       });
     }
     
@@ -1285,6 +1285,22 @@
         AOS.refresh();
       }, 100);
     });
+    
+    // Special handling for mobile devices
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+    }
+    
+    // Optimize for mobile
+    if (isMobile()) {
+      // Use shorter delays on mobile
+      document.querySelectorAll('[data-aos-delay]').forEach(item => {
+        const currentDelay = parseInt(item.getAttribute('data-aos-delay'), 10);
+        if (currentDelay > 200) {
+          item.setAttribute('data-aos-delay', '100');
+        }
+      });
+    }
 
     // Initialize Typed.js for name
     const typedName = new Typed('#typed-name', {
@@ -1420,7 +1436,9 @@
       // Force a small reflow
       void document.documentElement.offsetWidth;
       
-      // Re-add animation classes after a short delay
+      // Re-add animation classes after a short delay - faster on mobile
+      const delay = isMobile() ? 100 : 200;
+      
       setTimeout(() => {
         AOS.refresh();
         
@@ -1430,18 +1448,32 @@
             el.classList.add('aos-animate');
           }
         });
-      }, 200);
+      }, delay);
     }
     
-    // Helper function to check if element is in viewport
+    // Helper function to check if element is in viewport, with special mobile handling
     function isElementInViewport(el) {
       const rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+      
+      // For mobile, we use a more generous threshold to trigger animations earlier
+      if (isMobile()) {
+        return (
+          rect.top <= windowHeight * 0.85 && // Element is in the top 85% of the viewport
+          rect.bottom >= -50 && // Element has entered the viewport by at least 50px
+          rect.left <= windowWidth &&
+          rect.right >= 0
+        );
+      } else {
+        // Desktop behavior
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= windowHeight &&
+          rect.right <= windowWidth
+        );
+      }
     }
     
     // Reset AOS on page navigation
@@ -1449,9 +1481,46 @@
     originalNavListener.forEach(link => {
       link.addEventListener('click', () => {
         // Trigger AOS animations after page transition
-        setTimeout(triggerAOSAnimations, 150);
+        setTimeout(triggerAOSAnimations, isMobile() ? 100 : 150);
       });
     });
+    
+    // Add scroll listener for mobile to ensure animations trigger properly
+    if (isMobile()) {
+      // Debounce function to limit how often the scroll event fires
+      function debounce(func, wait) {
+        let timeout;
+        return function() {
+          const context = this, args = arguments;
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            func.apply(context, args);
+          }, wait);
+        };
+      }
+      
+      // Mobile scroll handler with debounce
+      const handleScroll = debounce(() => {
+        document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(el => {
+          if (isElementInViewport(el)) {
+            el.classList.add('aos-animate');
+          }
+        });
+      }, 50);
+      
+      // Add the scroll event listener
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    // Handle orientation changes on mobile
+    window.addEventListener('orientationchange', function() {
+      // Wait for orientation change to complete
+      setTimeout(function() {
+        AOS.refresh();
+        triggerAOSAnimations();
+      }, 200);
+    });
+    
   </script>
 
 </body>
