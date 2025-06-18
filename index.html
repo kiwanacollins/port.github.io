@@ -7,6 +7,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kiwana Collins - Web Developer Portfolio</title>
 
+  <!-- Prevent horizontal scrolling fix -->
+  <style>
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+    /* Make sure all content respects viewport width */
+    img, iframe, video, table {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Additional mobile fixes */
+    .has-scrollbar {
+      max-width: 100%;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+    
+    .testimonials-list {
+      padding-bottom: 15px;
+    }
+    
+    @media (max-width: 580px) {
+      .sidebar-info {
+        max-width: 100%;
+      }
+      .project-item {
+        max-width: 100%;
+      }
+      .timeline-text {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+      .service-item, .skills-item {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+      }
+      .service-content-box {
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
+      .input-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .form-input {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+
   <!--
     - favicon
   -->
@@ -39,7 +95,7 @@
   <main>
 
     <!-- Particles.js Background -->
-    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;"></div>
 
     <!--
       - #SIDEBAR
@@ -1192,7 +1248,7 @@
           <figure>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19060264!2d32.290275!3d0.347596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbd52f78374ab%3A0x9652d689b96b00a4!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
+              style="width:100%; border:0;" height="300" loading="lazy"></iframe>
           </figure>
         </section>
 
@@ -1326,10 +1382,10 @@
     particlesJS('particles-js', {
       particles: {
         number: {
-          value: 80,
+          value: isMobile() ? 30 : 80, // Reduce particles on mobile
           density: {
             enable: true,
-            value_area: 800
+            value_area: isMobile() ? 1200 : 800
           }
         },
         color: {
@@ -1518,8 +1574,36 @@
       setTimeout(function() {
         AOS.refresh();
         triggerAOSAnimations();
+        preventHorizontalScroll();
       }, 200);
     });
+    
+    // Function to prevent horizontal scroll issues on mobile
+    function preventHorizontalScroll() {
+      // Force the viewport width to match the device width
+      const metaViewport = document.querySelector('meta[name="viewport"]');
+      if (metaViewport) {
+        metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+      }
+      
+      // Set the body width to the viewport width
+      document.body.style.width = window.innerWidth + 'px';
+      
+      // Check for any elements wider than viewport and fix them
+      const allElements = document.querySelectorAll('*');
+      const viewportWidth = window.innerWidth;
+      
+      allElements.forEach(element => {
+        if (element.offsetWidth > viewportWidth) {
+          element.style.maxWidth = '100%';
+          element.style.overflowX = 'hidden';
+        }
+      });
+    }
+    
+    // Call on page load
+    document.addEventListener('DOMContentLoaded', preventHorizontalScroll);
+    window.addEventListener('resize', preventHorizontalScroll);
     
   </script>
 
